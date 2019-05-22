@@ -1,0 +1,12 @@
+
+@import "rem";
+@import "mixins";
+@import "variables";
+@import "reset";
+
+.box{
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 10rem;
+    background: red;
+}

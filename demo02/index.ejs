@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    
+    <div>修改后1</div>
+    <% for(var i in htmlWebpackPlugin.files.chunks) {
+      %>
+      <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks[i].entry %>"></script>
+      <% } %>
+  </body>
+</html>

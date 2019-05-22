@@ -1,0 +1,21 @@
+//
+// Rem
+// --------------------------------------------------
+// Vertical screen
+//375屏幕为 20px，以此为基础计算出每一种宽度的字体大小
+//375以下不变，375以上等比放大
+$baseWidth: 320px;
+$baseFont: 20px;
+//默认当做320px宽度的屏幕来处理
+html {
+  font-size: $baseFont;
+}
+$bps: 320px,360px,375px,400px,411px, 414px,435px, 480px;
+@each $bp in $bps{
+  $font: $bp/$baseWidth*$baseFont;
+  @media only screen and (min-width: $bp){
+    html {
+      font-size: $font !important;
+    }
+  }
+}
