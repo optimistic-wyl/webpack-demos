@@ -4,3 +4,9 @@ git remote add origin https://github.com/optimistic-wyl/webpack-demos.git
 
 从远程拉取时执行：
 git branch --set-upstream-to=origin/master master
+
+
+node-v8.11.1
+npm-v5.6.0
+webpack-v3.10.0
+
