@@ -1,4 +1,4 @@
-git remote rm origin
+﻿git remote rm origin
 
 git remote add origin https://github.com/optimistic-wyl/webpack-demos.git
 
@@ -9,4 +9,33 @@ git branch --set-upstream-to=origin/master master
 node-v8.11.1
 npm-v5.6.0
 webpack-v3.10.0
+
+最好的字体转换工具还是Font Squirrel提供的generator:https://www.fontsquirrel.com/tools/webfont-generator
+
+CSS3动画帧数计算器(工具):
+http://tid.tenpay.com/labs/css3_keyframes_calculator.html
+
+缩放是相对于ideal viewport来缩放的
+当前缩放值 = ideal viewport宽度  / visual viewport宽度
+浏览器会取它们两个中较大的那个值
+
+layout viewport的宽度 = document.documentElement.clientWidth;(网页的根元素的宽度)
+
+visual viewport的宽度 = window.innerWidth;（浏览器可视区域的宽度）
+
+ideal viewport的宽度 = 设备独立像素宽度,window对象有一个devicePixelRatio属性 = 设备物理像素 / 设备独立像素宽度
+
+visual viewport宽度 = ideal viewport宽度  / 当前缩放值
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+中的width表示的是layout viewport的宽度，device-width表示的是ideal viewport的宽度
+
+当layout viewport的宽度 == visual viewport的宽度的时候，浏览器就不会出想滚动条
+
+http://www.cnblogs.com/2050/p/3877280.html
+http://www.cnblogs.com/koukouyifan/p/4066567.html
+
+http://www.xueui.cn/design-theory/learn-ui-1.html
+
+http://www.cnblogs.com/yaozhongxiao/archive/2014/07/14/3842908.html
 
