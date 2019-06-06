@@ -10,7 +10,10 @@ node-v8.11.1
 npm-v5.6.0
 webpack-v3.10.0
 
-最好的字体转换工具还是Font Squirrel提供的generator:https://www.fontsquirrel.com/tools/webfont-generator
+
+最好的字体转换工具还是Font Squirrel提供的generator:
+https://www.fontsquirrel.com/tools/webfont-generator
+https://transfonter.org/
 
 CSS3动画帧数计算器(工具):
 http://tid.tenpay.com/labs/css3_keyframes_calculator.html
