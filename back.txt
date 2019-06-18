@@ -26,7 +26,8 @@ layout viewport的宽度 = document.documentElement.clientWidth;(网页的根元
 
 visual viewport的宽度 = window.innerWidth;（浏览器可视区域的宽度）
 
-ideal viewport的宽度 = 设备独立像素宽度,window对象有一个devicePixelRatio属性 = 设备物理像素 / 设备独立像素宽度
+ideal viewport的宽度 = device-width,
+window对象有一个devicePixelRatio属性 = 设备物理像素 / 设备独立像素宽度（设备分辨率代表物理像素，逻辑分辨率代表独立像素）
 
 visual viewport宽度 = ideal viewport宽度  / 当前缩放值
 
