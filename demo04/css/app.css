@@ -1,5 +1,14 @@
 
-
+:root {
+  --main-font-size: 16px;
+  --gap: 20px;
+}
 h1{
+  /* --variable: 2; */
+  
+  font-size: calc(var(--main-font-size) * 2);
   background: red;
+  display: flex;
+  width: calc(var(--gap) * 10px);
+  margin-top: calc(var(--gap) * 2);
 }

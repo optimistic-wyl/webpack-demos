@@ -5,5 +5,12 @@
     "dev": "webpack-dev-server --open",
     "build": "webpack -p"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "postcss-calc": "^7.0.1",
+    "postcss-custom-properties": "^8.0.10",
+    "postcss-scss": "^2.0.0",
+    "precss": "^4.0.0"
+  }
 }
