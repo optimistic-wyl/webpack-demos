@@ -43,3 +43,5 @@ http://www.xueui.cn/design-theory/learn-ui-1.html
 
 http://www.cnblogs.com/yaozhongxiao/archive/2014/07/14/3842908.html
 
+rm -rf node_modules删除node_modules文件夹，快一些
+
