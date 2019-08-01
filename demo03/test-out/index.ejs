@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover, initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <% for(var i in htmlWebpackPlugin.files.css) {%>
+    <link href="<%= htmlWebpackPlugin.files.css[i] %>" rel="stylesheet">
+    <% } %>
+  </head>
+  <body>
+    <div class="box">
+      我是box,测试一下git更新,测试一下远程更新
+    </div>
+    <% for(var i in htmlWebpackPlugin.files.chunks) {%>
+    <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks[i].entry %>"></script>
+    <% } %>
+  </body>
+</html>
