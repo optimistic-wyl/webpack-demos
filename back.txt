@@ -8,6 +8,14 @@ git branch --set-upstream-to=origin/master master
 git修改commit comment
 git commit --amend -m "现场版：问卷调查样式修改"
 
+git打标签
+git tag -a tagName -m "my tag"
+
+将tag同步到远程服务器
+git push origin [tagName]推送单个分支
+
+git push origin --tags推送本地所有tag
+
 
 node-v8.11.1
 npm-v5.6.0
