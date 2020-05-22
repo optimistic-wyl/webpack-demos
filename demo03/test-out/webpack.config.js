@@ -1,8 +1,11 @@
 const path = require('path')
+let webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 let ExtractTextPlugin = require('extract-text-webpack-plugin')
 //const ExtractCssChunks = require('extract-css-chunks-webpack-plugin')
+let CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin
+
 module.exports = {
   devtool: 'eval',
   entry: {
@@ -62,12 +65,17 @@ module.exports = {
   plugins:[
     //new CleanWebpackPlugin(['dist'],{root: path.join(__dirname,'./')}),
     // new CleanWebpackPlugin(['dist']),
+    new CommonsChunkPlugin({
+      name: 'utils',
+      chunks: ['main', 'test1']
+    }),
     new HtmlWebpackPlugin({
       //hash: true,
       //filename:'index-2.html',
       template: path.join(__dirname, '', 'index.ejs'),
       title: 'Html Webpack Plugin-index',
       inject: false,
+      chunks: [ "common" ]
     }),
     new CleanWebpackPlugin(),
     /* new ExtractCssChunks({
