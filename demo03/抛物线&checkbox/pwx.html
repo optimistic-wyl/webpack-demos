@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title> New Document </title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<style>
+div.panel{
+  width: 400px; 
+  height: 500px; 
+  border: 1px solid #000;
+}
+.target{
+ position: absolute;
+ bottom: 20px;
+ right: 20px;
+}
+
+.mycheck {
+  width:25px;
+  display: inline-block;
+  position:relative;
+  margin-top: 8px;
+  line-height: normal;
+}
+.mycheck input[type=checkbox] {
+  visibility:hidden;
+}
+.mycheck label {
+  cursor:pointer;
+  position:absolute;
+  width:16px;
+  height:16px;
+  top:0;
+  left:0;
+  background:#fff;
+  border:2px solid #ccc;
+}
+.mycheck label:after {
+  opacity:0;
+  content:'';
+  position:absolute;
+  width:12px;
+  height:6px;
+  background:transparent;
+  top:2px;
+  left:1px;
+  border:2px solid #fff;
+  border-top:none;
+  border-right:none;
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+.mycheck input[type=checkbox]:checked + label {
+  background:#008ee9;
+  border:2px solid #008ee9;
+}
+.mycheck input[type=checkbox]:checked + label:after {
+  opacity:1;
+  background:#008ee9;
+}
+</style>
+</head>
+
+<body>
+<div class='target'>
+	购物车	
+</div>
+<div class="panel">
+  <div class="item">
+    <img class="photo" src="./img/150.jpg" width="100" height="100" />
+    小猫飞飞
+  </div>
+  <div class="item">
+    <img class="photo" src="./img/150.jpg" width="100" height="100" />
+    小猫飘飘
+  </div>
+  <div class="item">
+    <img class="photo" src="./img/150.jpg" width="100" height="100" />
+    小猫爬爬
+  </div>
+</div>
+<div class="mycheck">
+ <input type="checkbox" checked value="${a.path}" id="checkbox${a.path}" name="">
+ <label for="checkbox${a.path}"></label>
+</div>
+<script src='js/jquery.min.js'></script>
+<script src='js/jquery.easing.min.js'></script>
+<script>
+$('div.item').on('click', function(){
+  var $orgImg = $('img', this);
+  var $targetDiv = $('div.target');
+  var $fxImg = $orgImg.clone().css({
+    'position': 'absolute',
+    'z-index': 10000,
+    'width': $orgImg.width(),
+    'height': $orgImg.height(),
+    'border-radius': '50%'
+  }).css($orgImg.offset()).appendTo('body');
+  $fxImg              
+    .animate({
+        left: [$targetDiv.offset().left + $targetDiv.width() - $fxImg.width(), 'linear'],
+        top: [$targetDiv.offset().top + $targetDiv.height() - $fxImg.height(), 'easeOutBack']
+    }, 600)
+    .fadeOut(200, function () {
+        $fxImg.detach();
+    });
+});
+</script>
+</body>
+</html>
